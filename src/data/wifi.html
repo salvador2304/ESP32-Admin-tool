@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<!-- BEGIN HEAD-->
+<head>
+     <meta charset="UTF-8" />
+    <title>AdminTools | WIFI</title>
+     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="Salvador cruz" name="author" />
+    <!--fav icon-->
+    <link rel="icon" href="ECO.png" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="MoneAdmin.css" />
+    <link rel="stylesheet" href="font-awesome.css" />
+    <link rel="stylesheet" href="bootstrap-switch.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!--END GLOBAL STYLES -->
+</head>
+<!-- END  HEAD-->
+<!-- BEGIN BODY-->
+<body class="padTop53 " >
+     <!-- MAIN WRAPPER -->
+    <div id="wrap">
+         <!-- HEADER SECTION -->
+        <div id="top">
+            <nav class="navbar navbar-inverse navbar-fixed-top " style="padding-top: 10px;">
+                <a data-original-title="Show/Hide Menu" data-placement="bottom" data-tooltip="tooltip" class="accordion-toggle btn btn-primary btn-sm visible-xs" data-toggle="collapse" href="#menu" id="menu-toggle">
+                    <i class="icon-align-justify"></i>
+                </a>
+                <!-- LOGO SECTION -->
+                <header class="navbar-header">
+                    <a href="index.html" class="navbar-brand">
+                    <img src="sidon.png" alt="" /></a>
+                </header>
+                <!-- END LOGO SECTION -->
+                <ul class="nav navbar-top-links navbar-right">
+                    <!--ADMIN SETTINGS SECTIONS -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="icon-user "></i>&nbsp; <i class="icon-chevron-down "></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="icon-user"></i> Usuario </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><i class="icon-signout"></i> Salir </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--END ADMIN SETTINGS -->
+                </ul>
+            </nav>
+        </div>
+        <!-- END HEADER SECTION -->
+        <!-- MENU SECTION -->
+       <div id="left">
+            <div class="media user-media well-small">
+                <a class="user-link" href="/">
+                    <img class="media-object img-thumbnail user-img" alt="User Picture" src="espressif-53.png" />
+                </a>
+                <br />
+                <div class="media-body">
+                    <h5 class="media-heading">Sidon/Sense</h5>
+                    <ul class="list-unstyled user-info">
+                        <li>
+                             <a class="btn btn-success btn-xs btn-circle" style="width: 10px;height: 12px;"></a> Online
+                        </li>
+                    </ul>
+                </div>
+                <br />
+            </div>
+            <ul id="menu" class="collapse">
+                <li class="panel active">
+                    <a href="/" >
+                        <i class="icon-th-large"></i> Dashboard
+                    </a>                   
+                </li>
+                <li class="panel">
+                    <a href="sidon-wifi" >
+                        <i class="icon-signal"></i> Wifi
+                    </a>                   
+                </li>
+                <li class="panel">
+                    <a href="index.html" >
+                        <i class=" icon-sitemap"></i> MQTT
+                    </a>                   
+                </li>
+                <li class="panel ">
+                    <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
+                        <i class="icon-cogs"> </i> Administrar     
+                        <span class="pull-right">
+                          <i class="icon-angle-left"></i>
+                    </a>
+                    <ul class="collapse" id="component-nav">
+                        <li class=""><a href="#"><i class="icon-angle-right"></i> Dispositivo </a></li>
+                         <li class=""><a href="#"><i class="icon-angle-right"></i> Ajustes predeterminados de fabrica </a></li>
+                        <li class=""><a href="#"><i class="icon-angle-right"></i> Reinicio </a></li>
+                        <li class=""><a href="#"><i class="icon-angle-right"></i> Contraseña </a></li>
+                    </ul>
+                </li>
+                <li class="panel">
+                    <a href="#" >
+                        <i class="icon-signout"></i> Salir
+                    </a>                   
+                </li>
+            </ul>
+        </div>
+        <!--END MENU SECTION -->
+        <!--PAGE CONTENT -->
+        <div id="content">
+
+            <div class="inner" style="min-height:1200px;">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <h2>Estado del Dispositivo</h2>
+                    </div>
+                </div>
+                <hr />
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <i class="icon-rss"></i>  Configuración de Red WiFi en Modo Cliente y Access Point
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+
+                                <div class="form-group">
+                                    <label for="text1" class="control-label col-lg-4">Normal Input Field</label>
+
+                                    <div class="col-lg-8">
+                                        <input type="text" id="text1" placeholder="Email" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="pass1" class="control-label col-lg-4">Password Field</label>
+
+                                    <div class="col-lg-8">
+                                        <input class="form-control" type="password" id="pass1" data-original-title="Please use your secure password" data-placement="top" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-lg-4">Read only input</label>
+
+                                    <div class="col-lg-8">
+                                        <input type="text" value="read only" readonly="" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-lg-4">Disabled input</label>
+
+                                    <div class="col-lg-8">
+                                        <input type="text" value="disabled" disabled="disabled" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="text2" class="control-label col-lg-4">With Placeholder</label>
+
+                                    <div class="col-lg-8">
+                                        <input type="text" id="text2" placeholder="placeholder text" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="limiter" class="control-label col-lg-4">Input limiter</label>
+
+                                    <div class="col-lg-8">
+                                        <textarea id="limiter" class="form-control"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="text4" class="control-label col-lg-4">Default Textarea</label>
+
+                                    <div class="col-lg-8">
+                                        <textarea id="text4" class="form-control"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="autosize" class="control-label col-lg-4">Textarea With Autosize</label>
+
+                                    <div class="col-lg-8">
+                                        <textarea id="autosize" class="form-control"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="tags" class="control-label col-lg-4">Tags</label>
+
+                                    <div class="col-lg-8">
+                                        <input name="tags" id="tags" value="foo,bar,baz" class="form-control" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!--END PAGE CONTENT -->
+    </div>
+    <!-- END RIGHT STRIP  SECTION -->
+    </div>
+    <!--END MAIN WRAPPER -->
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>&copy;  ECOSAT &nbsp;2022 &nbsp;V1.0.0</p>
+    </div>
+    <!--END FOOTER -->
+     <!-- GLOBAL SCRIPTS -->
+    <script src="jquery-2.0.3.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="modernizr-2.6.2.js"></script>
+    <script src="bootstrap-switch.min.js"></script>
+    <script src="scrip.js"></script>
+    <!-- END GLOBAL SCRIPTS -->
+</body>
+    <!-- END BODY-->
+</html>
