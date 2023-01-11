@@ -3,7 +3,7 @@
 <!-- BEGIN HEAD-->
 <head>
      <meta charset="UTF-8" />
-    <title>AdminTools | WIFI</title>
+    <title>AdminTools | Administrar</title>
      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="Salvador cruz" name="author" />
@@ -78,7 +78,7 @@
                         <i class="icon-th-large"></i> Dashboard
                     </a>                   
                 </li>
-                <li class="panel active">
+                <li class="panel">
                     <a href="sidon-wifi" >
                         <i class="icon-signal"></i> Wifi
                     </a>                   
@@ -88,17 +88,17 @@
                         <i class=" icon-sitemap"></i> MQTT
                     </a>                   
                 </li>
-                <li class="panel">
+                <li class="panel active">
                     <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
                         <i class="icon-cogs"> </i> Administrar     
                         <span class="pull-right">
                           <i class="icon-angle-left"></i>
                     </a>
                     <ul class="collapse" id="component-nav">
-                        <li class=""><a href="sidon-device"><i class="icon-angle-right"></i> Dispositivo </a></li>
-                         <li class=""><a href="sidon-restore"><i class="icon-angle-right"></i> Ajustes predeterminados de fabrica </a></li>
-                        <li class=""><a href="sidon-restart"><i class="icon-angle-right"></i> Reinicio </a></li>
-                        <li class=""><a href="sidon-admin"><i class="icon-angle-right"></i> Contraseña </a></li>
+                        <li class=""><a href="sidon-device"><i class="icon-info-sign"></i> Dispositivo </a></li>
+                        <li class=""><a href="sidon-restore"><i class="icon-refresh"></i> Ajustes predeterminados de fábrica </a></li>
+                        <li class=""><a href="sidon-restart"><i class="icon-spinner"></i> Reinicio </a></li>
+                        <li class=""><a href="sidon-admin"><i class="icon-lock"></i> Contraseña </a></li>
                     </ul>
                 </li>
                 <li class="panel">
@@ -115,129 +115,53 @@
             <div class="inner" style="min-height:1200px;">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>Configuracion de la red inalambrica</h2>
+                        <h2>Configuracion de usuario y contraseña</h2>
                     </div>
                 </div>
                 <hr />
                 <div class="col-lg-12">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="icon-rss"></i>  Configuración de Red WiFi en Modo Cliente y Access Point
+                            <i class="icon-lock"></i>  El Nombre de Usuario y la Contraseña pueden contener entre 4 - 15 caracteres y no puede incluir espacios
                         </div>
                         <br>
                         <div class="panel-body">
                             
                             <form class="form-horizontal">
 
-                                <div class="form-group">
-                                    <label for="#" class="control-label col-lg-3"></label>
-                                    <div class="col-lg-5">
-                                        <button class="btn" data-toggle="modal" data-target="#myModal"><i class="icon-search"></i> Buscar</button>
-                                    </div>
-                                </div>
-
 
                                 <div class="form-group" id="form_SSID">
-                                    <label for="text1" class="control-label col-lg-3">Nombre de la red inalambrica </label>
+                                    <label for="text1" class="control-label col-lg-3"> Nombre de usuario anterior</label>
                                     <div class="col-lg-5">
-                                        <input type="text" id="SSID" name="SSID" placeholder="SSID" class="form-control" />
+                                        <input type="text" id="SSID" name="SSID" placeholder="****" class="form-control" />
                                     </div>
                                 </div>
 
                                 <div class="form-group" id="form_PW">
-                                    <label for="pass1" class="control-label col-lg-3">Contraseña inalambrica</label>
+                                    <label for="pass1" class="control-label col-lg-3"> Contraseña anterior</label>
                                     <div class="col-lg-5">
                                         <input  type="password" id="PW" name="PW" placeholder="****" class="form-control"/>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="wifi_staticIP" class="control-label col-lg-3">IP Estático:</label>
+                                    <label for="text1" class="control-label col-lg-3"> Nombre de usuario nuevo</label>
                                     <div class="col-lg-5">
-                                        <div class="make-switch switch-mini" data-on="primary" data-off="danger">
-                                            <input type="checkbox" id="wifi_staticIP"/>
-                                        </div>
+                                        <input type="text" id="local_ip" name="local_ip" placeholder="****" class="form-control" />
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="text1" class="control-label col-lg-3">Direccion IP </label>
-                                    <div class="col-lg-5">
-                                        <input type="text" id="local_ip" name="local_ip" placeholder="Direccion IP" class="form-control" />
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="text1" class="control-label col-lg-3">Mascara de Subred</label>
-                                    <div class="col-lg-5">
-                                        <input type="text" id="text1" placeholder="255.255.255.0" class="form-control" />
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="text1" class="control-label col-lg-3">Puerta de Enlace</label>
-                                    <div class="col-lg-5">
-                                        <input type="text" id="text1" placeholder="192.168.10.1" class="form-control" />
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="text1" class="control-label col-lg-3">DNS primario </label>
-                                    <div class="col-lg-5">
-                                        <input type="text" id="text1" placeholder="8.8.8.8" class="form-control" />
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="text1" class="control-label col-lg-3">DNS Secundario </label>
-                                    <div class="col-lg-5">
-                                        <input type="text" id="text1" placeholder="8.8.4.4" class="form-control" />
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="wifi_staticIP" class="control-label col-lg-3">Modo AP:</label>
-                                    <div class="col-lg-5">
-                                        <div class="make-switch switch-mini" data-on="primary" data-off="danger">
-                                            <input type="checkbox" id="wifi_staticIP"/>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="text1" class="control-label col-lg-3">Nombre del AP</label>
-                                    <div class="col-lg-5">
-                                        <input type="text" id="text1" placeholder="Ecosat1" class="form-control" />
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="text1" class="control-label col-lg-3">Contraseña del AP</label>
+                                    <label for="text1" class="control-label col-lg-3">Contraseña nueva</label>
                                     <div class="col-lg-5">
                                         <input type="text" id="text1" placeholder="****" class="form-control" />
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="text1" class="control-label col-lg-3">Canal AP</label>
+                                    <label for="text1" class="control-label col-lg-3">Confirmar contraseña</label>
                                     <div class="col-lg-5">
-                                        <input type="text" id="text1" placeholder="13" class="form-control" />
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="wifi_staticIP" class="control-label col-lg-3">Visibilidad:</label>
-                                    <div class="col-lg-5">
-                                        <div class="make-switch switch-mini" data-on="primary" data-off="danger">
-                                            <input type="checkbox" id="wifi_staticIP" onchange="staticIPen();"/>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="text1" class="control-label col-lg-3">Numero de conexiones</label>
-                                    <div class="col-lg-5">
-                                        <input type="text" id="text1" placeholder="4" class="form-control" />
+                                        <input type="text" id="text1" placeholder="****" class="form-control" />
                                     </div>
                                 </div>
 
@@ -245,6 +169,7 @@
                                     <label for="#" class="control-label col-lg-3"></label>
                                     <div class="col-lg-5">
                                         <button class="btn btn-primary" type="submit"><i class="icon-save icon-white"></i> Guardar</button>
+                                        <button class="btn btn-info" type="button"><i class="icon-eraser icon-white"></i> Limpiar Todo</button>
                                     </div>
                                 </div>
 
